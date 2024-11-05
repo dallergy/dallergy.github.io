@@ -1,0 +1,60 @@
+{
+  "category": "Analgesics",
+  "drugs": [
+    {
+      "name": "Nimesulide",
+      "status": "None",
+      "description": "Selective COX-2 inhibitor, NSAID, analgesic, antipyretic"
+    },
+    {
+      "name": "Etoricoxib",
+      "status": "Mild",
+      "description": "Selective COX-2 inhibitor, NSAID, analgesic, anti-inflammatory"
+    },
+    {
+      "name": "Aspirin",
+      "status": "None",
+      "description": "NSAID, analgesic, antipyretic, antiplatelet"
+    },
+    {
+      "name": "Keterolac",
+      "status": "Moderate",
+      "description": "NSAID, potent analgesic, moderate anti-inflammatory"
+    },
+    {
+      "name": "Paracetamol",
+      "status": "Moderate",
+      "description": "Non-NSAID analgesic, antipyretic, centrally acting"
+    },
+    {
+      "name": "Aceclofenac",
+      "status": "Moderate",
+      "description": "NSAID, analgesic, anti-inflammatory"
+    },
+    {
+      "name": "Tramadol",
+      "status": "Moderate",
+      "description": "Opioid analgesic, SNRI properties, centrally acting"
+    },
+    {
+      "name": "Analgin",
+      "status": "Moderate",
+      "description": "Non-opioid analgesic, antipyretic, spasmolytic (metamizole)"
+    },
+    {
+      "name": "Piroxicam",
+      "status": "Mild",
+      "description": "NSAID, oxicam class, long half-life, analgesic, anti-inflammatory"
+    },
+    {
+      "name": "Ibuprofen",
+      "status": "Severe",
+      "description": "NSAID, propionic acid derivative, analgesic, anti-inflammatory"
+    },
+    {
+      "name": "Diclofenac",
+      "status": "Moderate",
+      "description": "NSAID, analgesic, anti-inflammatory"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "category": "Antibiotics",
+  "drugs": [
+    {
+      "name": "Tetracycline",
+      "status": "Moderate",
+      "description": "Broad-spectrum antibiotic, protein synthesis inhibitor"
+    },
+    {
+      "name": "Gatifloxacin",
+      "status": "Moderate",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Levofloxacin",
+      "status": "Moderate",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, respiratory infections"
+    },
+    {
+      "name": "Ofloxacin",
+      "status": "Mild",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Sparfloxacin",
+      "status": "Mild",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, respiratory infections"
+    },
+    {
+      "name": "Chloramphenicol",
+      "status": "None",
+      "description": "Broad-spectrum antibiotic, protein synthesis inhibitor"
+    },
+    {
+      "name": "Cefadroxyl",
+      "status": "None",
+      "description": "First-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Cefaclor",
+      "status": "Moderate",
+      "description": "Second-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Cefpodixime",
+      "status": "None",
+      "description": "Third-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Lomefloxacin",
+      "status": "Mild",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, urinary tract infections"
+    },
+    {
+      "name": "Cefotaxime",
+      "status": "Moderate",
+      "description": "Third-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Gentamicin",
+      "status": "Moderate",
+      "description": "Aminoglycoside, protein synthesis inhibitor, gram-negative bacteria"
+    },
+    {
+      "name": "Cefuroxime",
+      "status": "None",
+      "description": "Second-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Ciprofloxacin",
+      "status": "Severe",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Norfloxacin",
+      "status": "Moderate",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, urinary tract infections"
+    },
+    {
+      "name": "Amoxycillin",
+      "status": "Moderate",
+      "description": "Penicillin, cell wall synthesis inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Ampicillin",
+      "status": "None",
+      "description": "Penicillin, cell wall synthesis inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Oxytetracycline",
+      "status": "Mild",
+      "description": "Tetracycline, protein synthesis inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Clindamycin",
+      "status": "Moderate",
+      "description": "Lincosamide, protein synthesis inhibitor, anaerobic bacteria"
+    },
+    {
+      "name": "Amikacin",
+      "status": "Mild",
+      "description": "Aminoglycoside, protein synthesis inhibitor, gram-negative bacteria"
+    },
+    {
+      "name": "Moxyfloxacin",
+      "status": "Moderate",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, respiratory infections"
+    },
+    {
+      "name": "Doxycycline",
+      "status": "Moderate",
+      "description": "Tetracycline, protein synthesis inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Cotrimoxazole",
+      "status": "Moderate",
+      "description": "Sulfonamide-trimethoprim combination, folate synthesis inhibitor"
+    },
+    {
+      "name": "Penicillin",
+      "status": "Moderate",
+      "description": "Beta-lactam, cell wall synthesis inhibitor, gram-positive bacteria"
+    },
+    {
+      "name": "Azithromycin",
+      "status": "None",
+      "description": "Macrolide, protein synthesis inhibitor, respiratory infections"
+    },
+    {
+      "name": "Clarithromycin",
+      "status": "Severe",
+      "description": "Macrolide, protein synthesis inhibitor, respiratory infections"
+    },
+    {
+      "name": "Feropenem",
+      "status": "None",
+      "description": "Carbapenem, cell wall synthesis inhibitor, broad-spectrum"
+    },
+    {
+      "name": "Roxythromycin",
+      "status": "Moderate",
+      "description": "Macrolide, protein synthesis inhibitor, respiratory infections"
+    },
+    {
+      "name": "Erythromycin",
+      "status": "Moderate",
+      "description": "Macrolide, protein synthesis inhibitor, respiratory infections"
+    },
+    {
+      "name": "Lincomycin",
+      "status": "Moderate",
+      "description": "Lincosamide, protein synthesis inhibitor, gram-positive bacteria"
+    },
+    {
+      "name": "Cefdinir",
+      "status": "None",
+      "description": "Third-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Gemifloxacin",
+      "status": "None",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, respiratory infections"
+    },
+    {
+      "name": "Cephalexin",
+      "status": "None",
+      "description": "First-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Cefixim",
+      "status": "Moderate",
+      "description": "Third-generation cephalosporin, cell wall synthesis inhibitor"
+    },
+    {
+      "name": "Purifloxcin",
+      "status": "None",
+      "description": "Fluoroquinolone, DNA gyrase inhibitor, urinary tract infections"
+    },
+    {
+      "name": "Nitrofurantoin",
+      "status": "None",
+      "description": "Nitrofuran, multiple mechanisms, urinary tract infections"
+    },
+    {
+      "name": "Ceftriaxone",
+      "status": "Moderate",
+      "description": "Third-generation cephalosporin, cell wall synthesis inhibitor"
+    }
+  ]
+}

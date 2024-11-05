@@ -1,0 +1,80 @@
+{
+  "category": "Antihistamines",
+  "drugs": [
+    {
+      "name": "Ketotifen",
+      "status": "None",
+      "description": "First-generation, H1 antagonist, mast cell stabilizer"
+    },
+    {
+      "name": "Promethazin",
+      "status": "None",
+      "description": "First-generation, H1 antagonist, sedating"
+    },
+    {
+      "name": "Rupadinine",
+      "status": "Moderate",
+      "description": "Second-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "Cyproheptadine",
+      "status": "None",
+      "description": "First-generation, H1 antagonist, serotonin antagonist"
+    },
+    {
+      "name": "Montelukast",
+      "status": "Moderate",
+      "description": "Leukotriene receptor antagonist, anti-inflammatory"
+    },
+    {
+      "name": "Cetrizine",
+      "status": "None",
+      "description": "Second-generation, H1 antagonist, less sedating"
+    },
+    {
+      "name": "Fexofenadine",
+      "status": "None",
+      "description": "Third-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "Desloratidine",
+      "status": "Mild",
+      "description": "Third-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "Levocetrizine",
+      "status": "None",
+      "description": "Third-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "Loraditine",
+      "status": "Moderate",
+      "description": "Second-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "DEC",
+      "status": "Moderate",
+      "description": "Diethylcarbamazine, antifilarial, microfilaricide"
+    },
+    {
+      "name": "Hydroxyaine HCL",
+      "status": "None",
+      "description": "First-generation, H1 antagonist, sedating"
+    },
+    {
+      "name": "Ebastine",
+      "status": "None",
+      "description": "Second-generation, H1 antagonist, non-sedating"
+    },
+    {
+      "name": "Chlorphenaramine Melate",
+      "status": "None",
+      "description": "First-generation, H1 antagonist, sedating"
+    },
+    {
+      "name": "Bilastine",
+      "status": "None",
+      "description": "Second-generation, H1 antagonist, non-sedating"
+    }
+  ]
+}

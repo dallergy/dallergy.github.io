@@ -1,0 +1,95 @@
+{
+  "category": "Antidiarrhoeals / OT",
+  "drugs": [
+    {
+      "name": "Bupivacaine",
+      "status": "Moderate",
+      "description": "Local anesthetic, sodium channel blocker, long-acting"
+    },
+    {
+      "name": "Lignocaine",
+      "status": "None",
+      "description": "Local anesthetic, sodium channel blocker, fast-acting"
+    },
+    {
+      "name": "Lansoprazole",
+      "status": "None",
+      "description": "Proton pump inhibitor, reduces gastric acid"
+    },
+    {
+      "name": "Ornidazole",
+      "status": "Severe",
+      "description": "Antiprotozoal, antibacterial, DNA synthesis inhibitor"
+    },
+    {
+      "name": "Rabeprazole",
+      "status": "None",
+      "description": "Proton pump inhibitor, reduces gastric acid"
+    },
+    {
+      "name": "Pantoprazole",
+      "status": "None",
+      "description": "Proton pump inhibitor, reduces gastric acid"
+    },
+    {
+      "name": "Omeprazole",
+      "status": "None",
+      "description": "Proton pump inhibitor, reduces gastric acid"
+    },
+    {
+      "name": "Famotidine",
+      "status": "None",
+      "description": "H2 receptor antagonist, reduces gastric acid"
+    },
+    {
+      "name": "Satrogyl",
+      "status": "None",
+      "description": "Antiprotozoal, antibacterial, DNA synthesis inhibitor"
+    },
+    {
+      "name": "Metoclopramide",
+      "status": "Moderate",
+      "description": "Antiemetic, prokinetic, dopamine antagonist"
+    },
+    {
+      "name": "Ranitidine",
+      "status": "Severe",
+      "description": "H2 receptor antagonist, reduces gastric acid"
+    },
+    {
+      "name": "Ondansetron",
+      "status": "None",
+      "description": "Antiemetic, 5-HT3 receptor antagonist"
+    },
+    {
+      "name": "Metronidazole",
+      "status": "Mild",
+      "description": "Antiprotozoal, antibacterial, DNA synthesis inhibitor"
+    },
+    {
+      "name": "Tinidazole",
+      "status": "Moderate",
+      "description": "Antiprotozoal, antibacterial, DNA synthesis inhibitor"
+    },
+    {
+      "name": "Secnidazole",
+      "status": "None",
+      "description": "Antiprotozoal, antibacterial, DNA synthesis inhibitor"
+    },
+    {
+      "name": "Albendazole",
+      "status": "None",
+      "description": "Anthelmintic, microtubule formation inhibitor"
+    },
+    {
+      "name": "Domperidone",
+      "status": "Mild",
+      "description": "Antiemetic, prokinetic, dopamine antagonist"
+    },
+    {
+      "name": "Mebendazole",
+      "status": "None",
+      "description": "Anthelmintic, microtubule formation inhibitor"
+    }
+  ]
+}

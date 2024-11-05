@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preload" href="/antibiotics-json.json" />
+    <link rel="preload" href="/anlgesics-json.json" />
+    <link rel="preload" href="/antidiarrhoeals-json.json" />
+    <link rel="preload" href="/antihistamines-json.json" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"/>
+    <meta name="robots" content="noai" />
+  <meta name="ahrefs-bot" content="noindex, nofollow" />
+  <meta name="semrush-bot" content="noindex, nofollow" />
+    <title>Drug Allergy Report - Dr. Shounak Pal</title>
+    <script defer src="https://analytics.techweirdo.net/script.js" data-website-id="a2773c1a-c332-45e1-af0f-9e4135682b8e"></script>
+    <style>
+        :root {
+            --primary-50: #f0fdf4;
+            --primary-100: #dcfce7;
+            --primary-500: #22c55e;
+            --primary-600: #16a34a;
+            --primary-700: #15803d;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, var(--primary-50), white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--primary-100);
+            z-index: 50;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-700);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-600);
+        }
+
+        .button {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            
+        }
+
+        .button:hover {
+            background: var(--primary-600);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            max-width: 48rem;
+            margin: 0 auto 3rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--primary-100);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--gray-800);
+        }
+
+        /* Search */
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            padding-right: 3rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+        }
+
+        /* Filter Pills */
+        .filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pill-button {
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-button:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pill-button.active {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 2px var(--primary-500);
+        }
+
+        /* Drug Cards */
+        .drug-grid {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 1rem;
+           margin: 0 auto;
+        }
+
+        .drug-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--gray-100);
+            transition: all 0.2s;
+            width:100%;
+        }
+
+        .drug-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Status Badges */
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-none {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-mild {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-moderate {
+            background: #ffedd5;
+            color: #9a3412;
+        }
+
+        .badge-severe {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        /* Symptoms Box */
+        .symptoms-box {
+            background: #e7f5ff;
+            border: 1px solid #b8daff;
+            color: #004085;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid var(--primary-100);
+        }
+
+        .feedback-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feedback-button {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--primary-500);
+            background: white;
+            color: var(--primary-500);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .feedback-button:hover {
+            background: var(--primary-500);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+           /* .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }*/
+
+            .drug-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <span class="nav-brand">Dr. Shounak Pal - Drug Allergy Report</span>
+            <div class="nav-links">
+                <button id="pdfButton" class="button"><b>Get Report PDF</b></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="search" class="section">
+     <br>
+            <div class="card">
+                <div class="filter-pills">
+                    <button onclick="filterByStatus('all')" class="pill-button active">All</button>
+                    <button onclick="filterByStatus('none')" class="pill-button">No Allergy</button>
+                    <button onclick="filterByStatus('mild')" class="pill-button">Mild</button>
+                    <button onclick="filterByStatus('moderate')" class="pill-button">Moderate</button>
+                    <button onclick="filterByStatus('severe')" class="pill-button">Severe</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for any drug..." class="search-input">
+                </div>
+                
+                <div class="warning-box">
+                    <strong>Important Notice:</strong> Drugs marked as Moderate or Severe are strictly avoided unless deemed absolutely necessary by your healthcare provider.
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="section">
+            <div id="drugTables" class="drug-grid">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+            
+            <div class="symptoms-box">
+                <strong>Common Allergic Reaction Symptoms:</strong>
+                <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                    <li>Purpuric rash</li>
+                    <li>Angioedema (swelling under the skin)</li>
+                    <li>Hives or urticaria</li>
+                    <li>Difficulty breathing</li>
+                    <li>Itching or skin redness</li>
+                </ul>
+                <p style="margin-top: 0.5rem;"><em>If you experience any of these symptoms, seek immediate medical attention.</em></p>
+            </div>
+        </section>
+
+        <section id="report-details" class="section">
+            <div class="card">
+                <h3 style="color: var(--primary-700); font-size: 1.5rem; margin-bottom: 1rem;">Drug Allergy Test Report</h3>
+                <div style="display: grid; gap: 0.75rem;">
+                    <p><strong>Name:</strong> SHOUNAK PAL</p>
+                    <p><strong>Registration No:</strong> NCDP-16802/14-15</p>
+                    <p><strong>Symptom Complex:</strong> Drug Allergy</p>
+                    <p><strong>Referred By:</strong> Dr. SOVON KANTI CHAKRABORTY</p>
+                    <p><strong>Age:</strong> 15</p>
+                    <p><strong>Date/s:</strong> 11/03/2015, 20/03/2015, 27/03/2015</p>
+                    <p><strong>Method of Testing:</strong> By Skin Prick Test</p>
+                    <p><strong>Lab:</strong> Allergy and Asthma Treatment Centre</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="feedback-section">
+        <h3>Was this information helpful?</h3>
+        <div class="feedback-buttons">
+            <button class="feedback-button" data-umami-event="The content is helpful" onclick="submitFeedback('helpful')">Yes, very helpful</button>
+            <button class="feedback-button" data-umami-event="What the @£#& is this" onclick="submitFeedback('not-helpful')">Could be better</button>
+        </div>
+    </div>
+    <footer style="margin-top:1.2rem; font-size:0.9em; font-style:italic; text-align:center; padding:1rem; background-color:#f9f9f9;">
+    <p style="margin-top:1.2rem;">&copy; <span id="current-year"></span> Dr. Shounak Pal | For personal uses only</p>
+        
+    <p>
+        All content on this site is intended solely for healthcare professionals, to support emergency decision-making related to the care of Dr. Shounak Pal. Any use of this content for research or educational purposes requires prior written permission from  the owner (<a href="https://www.drshounak.com/contact">contact here</a>). Unauthorized use for artificial intelligence, machine learning, or any data training activities is strictly prohibited and will result in legal action.
+    </p>
+</footer>
+
+
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <script>
+        let allDrugs = [];
+        let searchHistory = [];
+        let fuse;
+
+        async function loadDrugData() {
+    const categories = ['analgesics', 'antibiotics', 'antidiarrhoeals', 'antihistamines'];
+    
+    // Just use relative paths - this will automatically use whatever domain serves the page
+    for (const category of categories) {
+        try {
+            const response = await fetch(`/${category}-json.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            allDrugs = allDrugs.concat(data.drugs.map(drug => ({...drug, category: data.category})));
+        } catch (error) {
+            console.error(`Error loading ${category} data:`, error);
+            handleDataLoadError(category);
+        }
+    }
+    
+    const fuseOptions = {
+        keys: [
+            { name: 'name', weight: 0.4 },
+            { name: 'description', weight: 0.3 },
+            { name: 'category', weight: 0.2 }
+        ],
+        includeScore: true,
+        threshold: 0.3,
+        distance: 100,
+        ignoreLocation: true,
+        minMatchCharLength: 2
+    };
+    fuse = new Fuse(allDrugs, fuseOptions);
+    
+    searchDrugs();
+    loadSearchHistory();
+}
+
+        function getStatusBadge(status) {
+            const statusClasses = {
+                'none': 'badge badge-none',
+                'mild': 'badge badge-mild',
+                'moderate': 'badge badge-moderate',
+                'severe': 'badge badge-severe'
+            };
+            return statusClasses[status.toLowerCase()] || 'badge';
+        }
+
+        function searchDrugs() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            let results;
+
+            if (searchTerm) {
+                const fuseResults = fuse.search(searchTerm);
+                results = fuseResults.map(result => result.item);
+                addToSearchHistory(searchTerm);
+            } else {
+                results = allDrugs;
+            }
+
+            displaySearchResults(results);
+        }
+
+        function filterByStatus(status) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.pill-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            let results;
+
+            if (searchTerm) {
+                const fuseResults = fuse.search(searchTerm);
+                results = fuseResults.map(result => result.item);
+            } else {
+                results = allDrugs;
+            }
+
+            if (status !== 'all') {
+                results = results.filter(drug => drug.status.toLowerCase() === status);
+            }
+
+            displaySearchResults(results);
+        }
+
+        function displaySearchResults(results) {
+    const resultsHtml = results.length ? 
+        results.map(drug => `
+            <div class="drug-card" tabindex="0">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600;">${drug.name}</h3>
+                    <span class="${getStatusBadge(drug.status)}">${drug.status}</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">${drug.category}</p>
+            </div>
+        `).join('') 
+        : '<div style="text-align: center; color: var(--gray-500); padding: 2rem;">No drugs found matching your search.</div>';
+    
+    document.getElementById('drugTables').innerHTML = resultsHtml;
+    makeCardsFocusable();
+}
+
+        function addToSearchHistory(searchTerm) {
+            const timestamp = new Date().toLocaleString();
+            searchHistory.unshift({ term: searchTerm, timestamp });
+            searchHistory = searchHistory.slice(0, 5);
+            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+            loadSearchHistory();
+        }
+
+        function loadSearchHistory() {
+            const savedHistory = localStorage.getItem('searchHistory');
+            if (savedHistory) {
+                searchHistory = JSON.parse(savedHistory);
+                const historySection = document.getElementById('history');
+                if (!historySection) {
+                    const mainElement = document.querySelector('main');
+                    const historyHTML = `
+                        <section id="history" class="section">
+                            <h2 class="section-title">Recent Searches</h2>
+                            <div class="card">
+                                <div id="searchHistory" style="display: grid; gap: 0.5rem;">
+                                    ${searchHistory.map(item => `
+                                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: white; border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                                            <div>
+                                                <p style="font-weight: 500;">${item.term}</p>
+                                                <p style="font-size: 0.875rem; color: var(--gray-500);">${item.timestamp}</p>
+                                            </div>
+                                            <button 
+                                                onclick="searchWithHistoryTerm('${item.term}')"
+                                                class="button"
+                                                style="font-size: 0.875rem;"
+                                            >
+                                                Search Again
+                                            </button>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </section>
+                    `;
+                    mainElement.insertAdjacentHTML('beforeend', historyHTML);
+                } else {
+                    const historyHTML = searchHistory.map(item => `
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: white; border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                            <div>
+                                <p style="font-weight: 500;">${item.term}</p>
+                                <p style="font-size: 0.875rem; color: var(--gray-500);">${item.timestamp}</p>
+                            </div>
+                            <button 
+                                onclick="searchWithHistoryTerm('${item.term}')"
+                                class="button"
+                                style="font-size: 0.875rem;"
+                            >
+                                Search Again
+                            </button>
+                        </div>
+                    `).join('');
+                    document.getElementById('searchHistory').innerHTML = historyHTML || 
+                        '<div style="text-align: center; color: var(--gray-500); padding: 1rem;">No recent searches</div>';
+                }
+            }
+        }
+
+        function searchWithHistoryTerm(term) {
+            document.getElementById('searchInput').value = term;
+            searchDrugs();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleDataLoadError(category) {
+            console.error(`Failed to load ${category} data`);
+            const errorMessage = `
+                <div style="text-align: center; color: #dc2626; padding: 1rem; background: #fee2e2; border-radius: 0.5rem; margin: 1rem 0;">
+                    Failed to load ${category} data. Please try refreshing the page.
+                </div>
+            `;
+            document.getElementById('drugTables').innerHTML += errorMessage;
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            searchDrugs();
+            document.querySelectorAll('.pill-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.pill-button').classList.add('active');
+        }
+
+        function setLoading(isLoading) {
+            const searchInput = document.getElementById('searchInput');
+            if (isLoading) {
+                searchInput.style.backgroundImage = 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%2322c55e\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cline x1=\'12\' y1=\'2\' x2=\'12\' y2=\'6\'%3E%3C/line%3E%3Cline x1=\'12\' y1=\'18\' x2=\'12\' y2=\'22\'%3E%3C/line%3E%3Cline x1=\'4.93\' y1=\'4.93\' x2=\'7.76\' y2=\'7.76\'%3E%3C/line%3E%3Cline x1=\'16.24\' y1=\'16.24\' x2=\'19.07\' y2=\'19.07\'%3E%3C/line%3E%3Cline x1=\'2\' y1=\'12\' x2=\'6\' y2=\'12\'%3E%3C/line%3E%3Cline x1=\'18\' y1=\'12\' x2=\'22\' y2=\'12\'%3E%3C/line%3E%3Cline x1=\'4.93\' y1=\'19.07\' x2=\'7.76\' y2=\'16.24\'%3E%3C/line%3E%3Cline x1=\'16.24\' y1=\'7.76\' x2=\'19.07\' y2=\'4.93\'%3E%3C/line%3E%3C/svg%3E")';
+                searchInput.style.backgroundSize = '1.5rem';
+                searchInput.style.backgroundPosition = 'center right 1rem';
+                searchInput.style.backgroundRepeat = 'no-repeat';
+            } else {
+                searchInput.style.backgroundImage = 'none';
+            }
+        }
+
+        function submitFeedback(type) {
+            const feedbackSection = document.querySelector('.feedback-section');
+            feedbackSection.innerHTML = '<h3>Thank you for your feedback!</h3>';
+            
+            // Here you can add the actual feedback submission logic
+            console.log('Feedback submitted:', type);
+            
+            // Optional: Hide the feedback section after a delay
+            setTimeout(() => {
+                feedbackSection.style.display = 'none';
+            }, 3000);
+        }
+
+        function makeCardsFocusable() {
+            document.querySelectorAll('.drug-card').forEach(card => {
+                card.setAttribute('tabindex', '0');
+            });
+        }
+
+        // Initialize
+        window.onload = function() {
+            loadDrugData();
+            
+            // Add debounced search event listener
+            const searchInput = document.getElementById('searchInput');
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                setLoading(true);
+                searchTimeout = setTimeout(() => {
+                    searchDrugs();
+                    setLoading(false);
+                }, 300);
+            });
+            
+            // Add enter key event listener
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchDrugs();
+                }
+            });
+
+            document.getElementById('pdfButton').onclick = function () {
+            window.open('https://drive.google.com/file/d/1278Yd0BYf4XRXpLRULKMoIo9XAJwFuuw/view?usp=drive_link', '_blank');
+        }
+
+        
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+            
+            
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                const results = document.querySelectorAll('.drug-card');
+                const focused = document.activeElement;
+                
+                if (!results.length) return;
+                
+                const index = Array.from(results).indexOf(focused);
+                
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    if (index < 0) {
+                        results[0].focus();
+                    } else if (index < results.length - 1) {
+                        results[index + 1].focus();
+                    }
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    if (index > 0) {
+                        results[index - 1].focus();
+                    }
+                }
+            });
+
+            // Initialize the first pill button as active
+            document.querySelector('.pill-button').classList.add('active');
+        };
+    </script>
+</body>
+</html>
